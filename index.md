@@ -12,14 +12,14 @@ knit        : slidify::knit2slides
 ---
 
 
-## 1. Introduction
+## Introduction
 
   - RGithubTrends is an application to visualize R github repositories trends.
   - User can compare different trends for the **top 20** starred repositories.
 
 ---
 
-## 2. Design
+## Design
 
   - For the top 20 starred repositories, the weekly activity in the past year (52 weeks) is obtained with the github API.
   - A generalized linear model is fit for each repository.
@@ -27,7 +27,7 @@ knit        : slidify::knit2slides
 
 ---
 
-## 3. Example
+## Example
 
   - An example of the model fitting algorithm:
 
@@ -43,7 +43,7 @@ ggplot(GitData[GitData$Repo == 'rmarkdown' | GitData$Repo == 'shiny',],
 
 ---
 
-## 4. Conclusion
+## Conclusion
 
   - shiny is very capable of creating reactive web pages.
   - Goto the [demo](http://apruden.shinyapps.io/RGithubTrends/).
