@@ -11,6 +11,7 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
+
 ## 1. Introduction
 
   - RGithubTrends is an application to visualize R github repositories trends.
@@ -31,8 +32,6 @@ knit        : slidify::knit2slides
   - An example of the model fitting algorithm:
 
 ```r
-library(ggplot2)
-GitData <- read.csv('GitData.csv')
 ggplot(GitData[GitData$Repo == 'rmarkdown' | GitData$Repo == 'shiny',],
         aes(Week, value, group=Repository, colour=Repository)) + geom_point() +
     stat_smooth(aes(fill=Repository), method='glm',
@@ -40,14 +39,11 @@ ggplot(GitData[GitData$Repo == 'rmarkdown' | GitData$Repo == 'shiny',],
     ylab('Number of commits')
 ```
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png)
+<img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
 
 ---
 
 ## 4. Conclusion
 
-  - Some of the top starred R repositories are no longer maintained.
-  - ggplot2 is very actively maintained.
+  - shiny is very capable of creating reactive web pages.
   - Goto the [demo](http://apruden.shinyapps.io/RGithubTrends/).
-
-

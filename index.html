@@ -79,16 +79,14 @@
 <li>An example of the model fitting algorithm:</li>
 </ul>
 
-<pre><code class="r">library(ggplot2)
-GitData &lt;- read.csv(&#39;GitData.csv&#39;)
-ggplot(GitData[GitData$Repo == &#39;rmarkdown&#39; | GitData$Repo == &#39;shiny&#39;,],
+<pre><code class="r">ggplot(GitData[GitData$Repo == &#39;rmarkdown&#39; | GitData$Repo == &#39;shiny&#39;,],
         aes(Week, value, group=Repository, colour=Repository)) + geom_point() +
     stat_smooth(aes(fill=Repository), method=&#39;glm&#39;,
         method.args=list(family=poisson(link=&#39;log&#39;)), alpha=0.3) +
     ylab(&#39;Number of commits&#39;)
 </code></pre>
 
-<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"></p>
+<p><img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -100,8 +98,7 @@ ggplot(GitData[GitData$Repo == &#39;rmarkdown&#39; | GitData$Repo == &#39;shiny&
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Some of the top starred R repositories are no longer maintained.</li>
-<li>ggplot2 is very actively maintained.</li>
+<li>shiny is very capable of creating reactive web pages.</li>
 <li>Goto the <a href="http://apruden.shinyapps.io/RGithubTrends/">demo</a>.</li>
 </ul>
 
